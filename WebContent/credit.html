@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function falseClick(){
+		alert("成功兑换，恭喜您");
+		
+		
+	}
+</script>
+<style>
+	body{
+		font-size: 12px;
+    	line-height: 19px;
+    	font-family: arial, sans-serif;
+    	color: #999ea2;
+    	background: #edf6ff url(images/body.png) repeat-x 0 0;
+    	min-width: 956px;
+    	display:flex;
+    	justify-content:center;
+    	align-items:center;	
+	}
+	#mainbody{
+		background: #AAAAAA;  
+		width:800px;
+		height:1000px;
+		background-image:url(indexres/css/images/1.jpg);
+		border-radius:10px;
+		display:flex;
+		justify-content:center;
+		align-content:flex-start;
+		flex-wrap:wrap;
+	}
+	#top_block{
+		background:url(image/121.png) no-repeat center center;
+		width:800px;
+		height:200px;
+		text-align:center;
+		font-size:35px;
+		/* font-family:"微软雅黑"; */
+		margin-top:100px;
+		line-height: 100px; 
+		font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	}
+	#input1{
+		width:400px;
+		height:300px;
+		display:flex;
+  		justify-content: center;
+		align-items:flex-start;
+		flex-wrap:wrap;
+		/* background:#999999; */
+	}
+	#instructure{
+		width:350px;
+		height:100px;
+		font-size:20px;
+		margin-bottom:20px;
+	}
+	#text{
+		width:200px;
+		height:40px;
+		font-size:20px;
+		margin-bottom:20px;
+	}
+	#button{
+		width:120px;
+		height:60px;
+	}
+	#form{
+		height:100px;
+		width:250px;
+		display:flex;
+  		justify-content:center;
+		align-items:flex-start;
+		flex-wrap:wrap;
+	}
+	#div_form{
+		padding-top:110px;
+		height:100px;
+		width:250px;
+	}
+</style>
+</head>
+<body>
+	<div name="mainbody" id="mainbody">
+		<div name="top_block" id="top_block"><h1>积分兑换</h1></div>
+		<div name="input1" id="input1">
+			<div id="instructure">
+				<p>积分兑换说明：</p>
+				<p>1.请凭借手机短信中的“小叶子”兑换码进行兑换</p>
+				<p>2.请注意，兑换码的兑换时间只有24h哦</p>
+				<p>3.请在下方输入兑换码进行兑换</p>
+			</div>
+			<div id="div_form">
+			<form id="form">
+				<input type="text" id="text">
+				<input type="button" id="button" value="兑换" onclick="falseClick()">
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
