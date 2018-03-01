@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE struts PUBLIC    
+            "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"    
+    "http://struts.apache.org/dtds/struts-2.5.dtd">  
+<struts>    
+    
+ 
+	<include file="struts-default.xml"></include>  
+	<!-- 指定默认编码集 -->  
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+	<!-- 指定需要Struts2处理的请求后缀 -->  
+	<!-- <constant name="struts.action.extension" value="do,action"></constant>-->  
+	<!-- 设置浏览器是否缓存静态内容，开发阶段应关闭，生产阶段打开，默认为打开 -->  
+	<constant name="struts.serve.static.browserCache" value="false"></constant>  
+	<!-- 当struts的配置文件修改后，系统是否自动重新加载该文件，默认为false，开发阶段应打开 -->  
+	<constant name="struts.configuration.xml.reload" value="true"></constant>  
+	<!-- 开发模式下使用，可以打印出更详细的错误信息 -->  
+	<constant name="struts.devMode" value="true"></constant>  
+	<!-- action全部用注解进行配置 -->  
+	
+	<!-- 是否开启动态方法调用 -->  
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+
+
+    
+    <!--添加包 -->
+    <package name="NBMS" namespace="/" extends="struts-default">  
+        <action name="doLogin" class="com.littleleaf.ubmsystem.action.Login">  
+            <result name="success">index.jsp</result>
+            <result name="fail">login.jsp</result>
+        </action>
+        
+        <action name="doReg" class="com.littleleaf.ubmsystem.action.Reg">  
+            <result name="success">login.jsp</result>
+            <result name="fail">reg.jsp</result>
+        </action>
+        
+        
+        <action name="UserExit" class="com.littleleaf.ubmsystem.action.UserExit">  
+            <result name="success">index.jsp</result>
+        </action>
+        
+        <action name="modifyPassword" class="com.littleleaf.ubmsystem.action.modifyPassword" method="check">  
+            <result name="success">modifyPassword.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        
+        <action name="modifyPasswordSubmit" class="com.littleleaf.ubmsystem.action.modifyPassword">  
+            <result name="success">login.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        
+        <action name="modifyPersonalInfo" class="com.littleleaf.ubmsystem.action.modifyPersonalInfo" method="check">  
+            <result name="success">modifyPersonalInfo.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        
+        <action name="modifyPersonalInfoSubmit" class="com.littleleaf.ubmsystem.action.modifyPersonalInfo">  
+            <result name="success">message.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        
+        
+        
+        
+        
+        <action name="adminLogin" class="com.littleleaf.ubmsystem.admin.action.Login">  
+            <result name="success">adminIndex.html</result>
+            <result name="fail">admin.jsp</result>
+        </action>
+        
+        <action name="adminExit" class="com.littleleaf.ubmsystem.admin.action.AdminExit">  
+            <result name="success">empty.jsp</result>
+        </action>
+        
+        
+        
+        <action name="adminSelectUser" class="com.littleleaf.ubmsystem.admin.action.SelectUser">  
+            <result name="success">userInfoManage.jsp</result>
+            <result name="fail">adminIndex.html</result>
+        </action>
+        
+        <action name="adminDeleteUser" class="com.littleleaf.ubmsystem.admin.action.DeleteUser">  
+            <result name="success">userInfoManage.jsp</result>
+            <result name="fail">adminIndex.html</result>
+        </action>
+        
+        <action name="adminUpdateUser" class="com.littleleaf.ubmsystem.admin.action.UpdateUser" method="check">  
+            <result name="success">updateUser.jsp</result>
+        </action>
+        
+        <action name="adminUpdateUserSubmit" class="com.littleleaf.ubmsystem.admin.action.UpdateUser">  
+            <result name="success">userInfoManage.jsp</result>
+            <result name="fail">adminIndex.html</result>
+        </action>
+        
+        
+        
+        <action name="adminSelectDevice" class="com.littleleaf.ubmsystem.admin.action.SelectDevice">  
+            <result name="success">deviceInfoManage.jsp</result>
+            <result name="fail">adminIndex.html</result>
+        </action>
+        
+        <action name="adminDeleteDevice" class="com.littleleaf.ubmsystem.admin.action.DeleteDevice">  
+            <result name="success">deviceInfoManage.jsp</result>
+            <result name="fail">adminIndex.html</result>
+        </action>
+        
+        <action name="adminInsertDevice" class="com.littleleaf.ubmsystem.admin.action.InsertDevice">  
+            <result name="success">deviceInfoManage.jsp</result>
+            <result name="fail">adminIndex.html</result>
+        </action>
+        
+        <action name="adminUpdateDevice" class="com.littleleaf.ubmsystem.admin.action.UpdateDevice" method="check">  
+            <result name="success">updateDevice.jsp</result>
+        </action>
+        
+        <action name="adminUpdateDeviceSubmit" class="com.littleleaf.ubmsystem.admin.action.UpdateDevice">  
+            <result name="success">userInfoManage.jsp</result>
+            <result name="fail">adminIndex.html</result>
+        </action>
+                
+    </package>
+    
+</struts> 
