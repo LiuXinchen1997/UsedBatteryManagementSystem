@@ -51,6 +51,43 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
+
+
+DROP TABLE IF EXISTS `info`;
+CREATE TABLE `info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `dates`  date NULL,
+  `content` varchar(500) NOT NULL,
+  `picUrl` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `userName` varchar(50) NULL,
+  `dates` date NOT NULL,
+  `content` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+insert into `comment` values(1,'NEW01','Jack','2017-10-21','台北一男子身份证号123456789，多次被怀疑是假证');
+insert into `comment` values(2,'NEW02','Mike','2017-10-21','上海一男子投河自杀，嫌河脏又爬上来');
+insert into `comment` values(3,'NEW03','Nicki','2017-02-18','北京一饭店为尽早打烊，冬天开冷风轰客');
+insert into `comment` values(4,'NEW04','Beyonce','2017-01-02','海南一老板白天发工资民工，晚上派人去抢');
+insert into `comment` values(5,'NEW05','Rihanna','2018-02-02','郑州一男子高级皮带解不开，两天不敢吃东西');
+insert into `comment` values(6,'NEW06','Maroon','2018-03-02','墨西哥一电视剧连续35年播出，现在已到12500集');
+
+
+insert into `info` values('台北一男子身份证号123456789，多次被怀疑是假证','2017-10-21','台北一男子身份证号123456789，多次被怀疑是假证','images/info1.jpg');
+insert into `info` values(2,'上海一男子投河自杀，嫌河脏又爬上来','2015-10-21','上海一男子投河自杀，嫌河脏又爬上来','images/info2.jpg');
+insert into `info` values(3,'北京一饭店为尽早打烊，冬天开冷风轰客','2017-02-18','北京一饭店为尽早打烊，冬天开冷风轰客','images/info3.jpg');
+insert into `info` values(4,'海南一老板白天发工资民工，晚上派人去抢','2017-01-02','海南一老板白天发工资民工，晚上派人去抢','images/info4.jpg');
+insert into `info` values(5,'郑州一男子高级皮带解不开，两天不敢吃东西','2018-02-02','郑州一男子高级皮带解不开，两天不敢吃东西','images/info5.jpg');
+insert into `info` values(6,'墨西哥一电视剧连续35年播出，现在已到12500集','2018-03-02','墨西哥一电视剧连续35年播出，现在已到12500集','images/info1.jpg');
+
 -- ----------------------------
 -- Records of user
 -- ----------------------------

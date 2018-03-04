@@ -50,6 +50,14 @@
             <result name="fail">error.jsp</result>
         </action>
         
+        <action name="listInformation" class="com.littleleaf.ubmsystem.action.ListInformation">  
+            <result name="success">share_news.jsp</result>
+        </action>
+        
+        <action name="listComment" class="com.littleleaf.ubmsystem.action.ListComment">  
+            <result name="success">single_comment.jsp</result>
+        </action>
+        
         <action name="modifyPersonalInfo" class="com.littleleaf.ubmsystem.action.modifyPersonalInfo" method="check">  
             <result name="success">modifyPersonalInfo.jsp</result>
             <result name="fail">error.jsp</result>
@@ -59,8 +67,6 @@
             <result name="success">message.jsp</result>
             <result name="fail">error.jsp</result>
         </action>
-        
-        
         
         
         

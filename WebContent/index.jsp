@@ -44,7 +44,7 @@
 				<nav id="navigation">
 				<ul>
 					<li><a href="#">关于我们</a></li>
-					<li><a href="#">资料分享</a></li>
+					<li><a href="consult/main.jsp">资料分享</a></li>
 					<li><a href="./plus.html">论坛专区</a></li>
 					
 					<%
@@ -113,7 +113,7 @@
 						<nav class="footer-nav">
 						<ul>
 							<li><a href="#">关于我们</a></li>
-							<li><a href="#">资料分享</a></li>
+							<li><a href="listInformationAction">资料分享</a></li>
 							<li><a href="#">论坛专区</a></li>
 							
 							<%
